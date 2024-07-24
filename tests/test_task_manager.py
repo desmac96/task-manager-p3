@@ -16,6 +16,7 @@ class TestTaskManager(unittest.TestCase):
         self.manager.add_task("Test task")
         self.manager.remove_task(0)
         self.assertEqual(len(self.manager.tasks), 0)
+        self.assertEqual(tasks[0].description, "Test task")
 
 if __name__ == '__main__':
     unittest.main()
