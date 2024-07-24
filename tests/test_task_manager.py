@@ -18,5 +18,10 @@ class TestTaskManager(unittest.TestCase):
         self.assertEqual(len(self.manager.tasks), 0)
         self.assertEqual(tasks[0].description, "Test task")
 
+    def test_mark_task_complete(self):
+        self.manager.add_task("Test task")
+        self.manager.mark_task_complete(0)
+        self.assertTrue(self.manager.tasks[0].completed)
+
 if __name__ == '__main__':
     unittest.main()
