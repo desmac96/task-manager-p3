@@ -1,27 +1,22 @@
-# tests/test_task_manager.py
+# src/task_manager.py
 
-import unittest
-from src.task_manager import TaskManager
+from src.task import Task
 
-class TestTaskManager(unittest.TestCase):
-    def setUp(self):
-        self.manager = TaskManager()
+class TaskManager:
+    def __init__(self):
+        self.tasks = []
 
-    def test_add_task(self):
-        self.manager.add_task("Test task")
-        self.assertEqual(len(self.manager.tasks), 1)
-        self.assertEqual(self.manager.tasks[0].description, "Test task")
+    def add_task(self, description):
+        task = Task(description)
+        self.tasks.append(task)
 
-    def test_remove_task(self):
-        self.manager.add_task("Test task")
-        self.manager.remove_task(0)
-        self.assertEqual(len(self.manager.tasks), 0)
-        self.assertEqual(tasks[0].description, "Test task")
+    def remove_task(self, index):
+        if 0 <= index < len(self.tasks):
+            self.tasks.pop(index)
 
-    def test_mark_task_complete(self):
-        self.manager.add_task("Test task")
-        self.manager.mark_task_complete(0)
-        self.assertTrue(self.manager.tasks[0].completed)
+    def list_tasks(self):
+        return self.tasks
 
-if __name__ == '__main__':
-    unittest.main()
+    def mark_task_complete(self, index):
+        if 0 <= index < len(self.tasks):
+            self.tasks[index].mark_complete()
