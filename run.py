@@ -2,15 +2,9 @@
 
 import os
 import argparse
-from flask import Flask
+
 from src.task_manager import TaskManager
-
-app = Flask(__name__)
-
-@app.route('/')
-def index():
-    return "Hello, World!"
-
+print("Welcome to the task manager")
 def main():
     parser = argparse.ArgumentParser(description="Command-line To-Do List Application")
     
@@ -56,9 +50,3 @@ def main():
     except Exception as e:
         print(f"An unexpected error occurred: {e}")
 
-    # Starting the Flask server
-    port = int(os.environ.get("PORT", 8000))
-    app.run(host="0.0.0.0", port=port)
-
-if __name__ == '__main__':
-    main()
