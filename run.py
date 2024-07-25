@@ -38,7 +38,6 @@ def main():
         elif args.command == 'complete':
             task_manager.mark_task_complete(args.index)
         else:
-            # If no arguments are provided, print the help message
             parser.print_help()
     except IndexError as e:
         print(f"Error: {e}")
