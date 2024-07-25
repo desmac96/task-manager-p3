@@ -4,6 +4,9 @@ import argparse
 from src.task_manager import TaskManager
 
 def main():
+    """
+    Main function to parse command-line arguments and execute corresponding actions.
+    """
     parser = argparse.ArgumentParser(description="Command-line To-Do List Application")
     
     subparsers = parser.add_subparsers(dest='command')
@@ -28,7 +31,7 @@ def main():
     
     task_manager = TaskManager()
 
-    try:  # Start of error handling block
+    try:
         if args.command == 'add':
             task_manager.add_task(args.description, args.due)
         elif args.command == 'list':
@@ -42,11 +45,11 @@ def main():
         else:
             parser.print_help()
     except IndexError as e:
-        print(f"Error: {e}")  # Added error handling for IndexError
+        print(f"Error: {e}")
     except ValueError as e:
-        print(f"Error: {e}")  # Added error handling for ValueError
+        print(f"Error: {e}")
     except Exception as e:
-        print(f"An unexpected error occurred: {e}")  # Added error handling for unexpected exceptions
+        print(f"An unexpected error occurred: {e}")
 
-if __name__ == '__main__':
+if __name__ == '__name__':
     main()
