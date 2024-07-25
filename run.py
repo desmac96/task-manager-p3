@@ -1,4 +1,5 @@
 import argparse
+import time
 from src.task_manager import TaskManager
 
 def main():
@@ -45,6 +46,10 @@ def main():
         print(f"Error: {e}")
     except Exception as e:
         print(f"An unexpected error occurred: {e}")
+
+    # Keep the process alive
+    while True:
+        time.sleep(3600)
 
 if __name__ == '__main__':
     main()
