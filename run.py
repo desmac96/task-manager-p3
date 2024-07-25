@@ -1,16 +1,7 @@
-# run.py
-
-"""
-This module provides a command-line interface (CLI) for managing tasks using TaskManager.
-"""
-
 import argparse
 from src.task_manager import TaskManager
 
 def main():
-    """
-    Main function to parse command-line arguments and execute corresponding actions.
-    """
     parser = argparse.ArgumentParser(description="Command-line To-Do List Application")
     
     subparsers = parser.add_subparsers(dest='command')
@@ -32,7 +23,7 @@ def main():
     complete_parser.add_argument('index', type=int, help='Index of the task to mark as complete')
 
     args = parser.parse_args()
-    
+
     task_manager = TaskManager()
 
     try:
@@ -47,6 +38,7 @@ def main():
         elif args.command == 'complete':
             task_manager.mark_task_complete(args.index)
         else:
+            # If no arguments are provided, print the help message
             parser.print_help()
     except IndexError as e:
         print(f"Error: {e}")
