@@ -1,7 +1,13 @@
 import os
 import argparse
-import time
+from flask import Flask
 from src.task_manager import TaskManager
+
+app = Flask(__name__)
+
+@app.route('/')
+def index():
+    return "Hello, World!"
 
 def main():
     parser = argparse.ArgumentParser(description="Command-line To-Do List Application")
@@ -48,11 +54,9 @@ def main():
     except Exception as e:
         print(f"An unexpected error occurred: {e}")
 
-    # Port configuration for Heroku
+    # Starting the Flask server
     port = int(os.environ.get("PORT", 8000))
-    print(f"Starting server on port {port}")
-    # Here you would start your server, for example if using Flask:
-    # app.run(host="0.0.0.0", port=port)
+    app.run(host="0.0.0.0", port=port)
 
 if __name__ == '__main__':
     main()
