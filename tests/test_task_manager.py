@@ -1,22 +1,55 @@
-# src/task_manager.py
+# tests/test_task_manager.py
 
-from src.task import Task
+"""
+Unit tests for the TaskManager class.
+"""
 
-class TaskManager:
-    def __init__(self):
-        self.tasks = []
+import unittest
+from src.task_manager import TaskManager
 
-    def add_task(self, description):
-        task = Task(description)
-        self.tasks.append(task)
+class TestTaskManager(unittest.TestCase):
+    """
+    Test case for the TaskManager class.
+    """
 
-    def remove_task(self, index):
-        if 0 <= index < len(self.tasks):
-            self.tasks.pop(index)
+    def setUp(self):
+        """
+        Set up a TaskManager instance for testing.
+        """
+        self.manager = TaskManager()
 
-    def list_tasks(self):
-        return self.tasks
+    def test_add_task(self):
+        """
+        Test adding a task to the TaskManager.
+        """
+        self.manager.add_task("Test task")
+        self.assertEqual(len(self.manager.tasks), 1)
+        self.assertEqual(self.manager.tasks[0].description, "Test task")
 
-    def mark_task_complete(self, index):
-        if 0 <= index < len(self.tasks):
-            self.tasks[index].mark_complete()
+    def test_remove_task(self):
+        """
+        Test removing a task from the TaskManager.
+        """
+        self.manager.add_task("Test task")
+        self.manager.remove_task(0)
+        self.assertEqual(len(self.manager.tasks), 0)
+
+    def test_list_tasks(self):
+        """
+        Test listing all tasks in the TaskManager.
+        """
+        self.manager.add_task("Test task")
+        tasks = self.manager.list_tasks()
+        self.assertEqual(len(tasks), 1)
+        self.assertEqual(tasks[0].description, "Test task")
+
+    def test_mark_task_complete(self):
+        """
+        Test marking a task as complete in the TaskManager.
+        """
+        self.manager.add_task("Test task")
+        self.manager.mark_task_complete(0)
+        self.assertTrue(self.manager.tasks[0].completed)
+
+if __name__ == '__main__':
+    unittest.main()

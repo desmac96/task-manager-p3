@@ -1,5 +1,9 @@
 # src/main.py
 
+"""
+This module provides a command-line interface (CLI) for managing tasks using TaskManager.
+"""
+
 import argparse
 from src.task_manager import TaskManager
 

@@ -1,8 +1,16 @@
 # src/task_manager.py
 
+"""
+This module defines the TaskManager class for managing a list of tasks.
+"""
+
 from src.task import Task
 
 class TaskManager:
+    """
+    A class to manage a list of tasks.
+    """
+    
     def __init__(self):
         """Initialize the TaskManager with an empty list of tasks."""
         self.tasks = []
