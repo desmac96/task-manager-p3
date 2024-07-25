@@ -5,6 +5,11 @@ import argparse
 
 from src.task_manager import TaskManager
 print("Welcome to the task manager")
+name=input("What is your name?")
+print ("Hello "+name)
+response=input ("Choose the following options\n 1. Add a new task \n 2. List all tasks")
+if response=="1":
+
 def main():
     parser = argparse.ArgumentParser(description="Command-line To-Do List Application")
     
