@@ -1,3 +1,4 @@
+import os
 import argparse
 import time
 from src.task_manager import TaskManager
@@ -47,9 +48,11 @@ def main():
     except Exception as e:
         print(f"An unexpected error occurred: {e}")
 
-    # Keep the process alive
-    while True:
-        time.sleep(3600)
+    # Port configuration for Heroku
+    port = int(os.environ.get("PORT", 8000))
+    print(f"Starting server on port {port}")
+    # Here you would start your server, for example if using Flask:
+    # app.run(host="0.0.0.0", port=port)
 
 if __name__ == '__main__':
     main()
