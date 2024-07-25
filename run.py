@@ -5,7 +5,7 @@ This module provides a command-line interface (CLI) for managing tasks using Tas
 """
 
 import argparse
-from src.task_manager import TaskManager  # Ensure the import path is correct
+from src.task_manager import TaskManager
 
 def main():
     """
