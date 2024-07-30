@@ -204,3 +204,102 @@
 
 <p><a href="#to-do-list">Back to top</a></p>
 
+<h2>Testing</h2>
+
+<h3>Manual Testing</h3>
+
+<h4>Functionality Tests</h4>
+<ol>
+  <li><strong>Welcome Message</strong>:
+    <ul>
+      <li>Input: Any alphabetic characters.</li>
+      <li>Expected Output: Valid name acceptance.</li>
+      <li>Result: Pass/Fail.</li>
+    </ul>
+  </li>
+  <li><strong>Add Task</strong>:
+    <ul>
+      <li>Input: Task description and optional due date.</li>
+      <li>Expected Output: Task added to the list.</li>
+      <li>Result: Pass/Fail.</li>
+    </ul>
+  </li>
+  <li><strong>List Tasks</strong>:
+    <ul>
+      <li>Input: List tasks command.</li>
+      <li>Expected Output: Display all tasks with status.</li>
+      <li>Result: Pass/Fail.</li>
+    </ul>
+  </li>
+  <li><strong>Remove Task</strong>:
+    <ul>
+      <li>Input: Task index.</li>
+      <li>Expected Output: Task removed from the list.</li>
+      <li>Result: Pass/Fail.</li>
+    </ul>
+  </li>
+  <li><strong>Mark Task Complete</strong>:
+    <ul>
+      <li>Input: Task index.</li>
+      <li>Expected Output: Task marked as complete.</li>
+      <li>Result: Pass/Fail.</li>
+    </ul>
+  </li>
+  <li><strong>Exit</strong>:
+    <ul>
+      <li>Input: Exit command.</li>
+      <li>Expected Output: Program exits gracefully.</li>
+      <li>Result: Pass/Fail.</li>
+    </ul>
+  </li>
+</ol>
+
+<h3>Testing User Inputs</h3>
+<ol>
+  <li><strong>Valid Name</strong>:
+    <ul>
+      <li>Input: Alphabetic characters.</li>
+      <li>Expected Output: Accepted.</li>
+      <li>Result: Pass/Fail.</li>
+    </ul>
+  </li>
+  <li><strong>Invalid Name</strong>:
+    <ul>
+      <li>Input: Numbers or special characters.</li>
+      <li>Expected Output: Error message and prompt to re-enter.</li>
+      <li>Result: Pass/Fail.</li>
+    </ul>
+  </li>
+  <li><strong>Valid Task Description</strong>:
+    <ul>
+      <li>Input: Any characters.</li>
+      <li>Expected Output: Accepted.</li>
+      <li>Result: Pass/Fail.</li>
+    </ul>
+  </li>
+  <li><strong>Invalid Task Index</strong>:
+    <ul>
+      <li>Input: Non-integer.</li>
+      <li>Expected Output: Error message and prompt to re-enter.</li>
+      <li>Result: Pass/Fail.</li>
+    </ul>
+  </li>
+</ol>
+
+<h3>Automated Testing</h3>
+<p>Automated testing was not implemented for this project.</p>
+
+<h3>Bugs</h3>
+
+<h4>Resolved Bugs</h4>
+<ul>
+  <li>Fixed indentation error in the main script.</li>
+</ul>
+
+<h4>Known Bugs</h4>
+<ul>
+  <li>No known bugs at the time of deployment.</li>
+</ul>
+
+<p><a href="#to-do-list">Back to top</a></p>
+
