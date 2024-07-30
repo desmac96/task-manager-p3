@@ -1,4 +1,3 @@
-import os
 import argparse
 from src.task_manager import TaskManager
 
@@ -24,18 +23,29 @@ def interactive_mode():
         elif response == "2":
             tasks = task_manager.list_tasks()
             print("\nCurrent Tasks:")
-            for i, task in enumerate(tasks):
-                print(f"{i}. {task}")
+            for i, task in enumerate(tasks):  # Zero-based indexing
+                status = "✓" if task["completed"] else "✗"
+                print(f"{i}. {task['description']} [Due: {task['due_date']}] [Completed: {status}]")
         
         elif response == "3":
-            index = int(input("Enter the index of the task to remove: "))
-            task_manager.remove_task(index)
-            print("Task removed.")
+            try:
+                index = int(input("Enter the index of the task to remove: "))
+                task_manager.remove_task(index)
+                print("Task removed.")
+            except ValueError:
+                print("Please enter a valid integer for the index.")
+            except IndexError as e:
+                print(f"Error: {e}")
         
         elif response == "4":
-            index = int(input("Enter the index of the task to complete: "))
-            task_manager.mark_task_complete(index)
-            print("Task marked as complete.")
+            try:
+                index = int(input("Enter the index of the task to complete: "))
+                task_manager.mark_task_complete(index)
+                print("Task marked as complete.")
+            except ValueError:
+                print("Please enter a valid integer for the index.")
+            except IndexError as e:
+                print(f"Error: {e}")
         
         elif response == "5":
             print("Exiting the task manager. Goodbye!")
@@ -74,12 +84,21 @@ def main():
             task_manager.add_task(args.description, args.due)
         elif args.command == 'list':
             tasks = task_manager.list_tasks()
-            for i, task in enumerate(tasks):
-                print(f"{i}. {task}")
+            for i, task in enumerate(tasks):  # Zero-based indexing
+                status = "✓" if task["completed"] else "✗"
+                print(f"{i}. {task['description']} [Due: {task['due_date']}] [Completed: {status}]")
         elif args.command == 'remove':
-            task_manager.remove_task(args.index)
+            try:
+                task_manager.remove_task(args.index)
+                print("Task removed.")
+            except IndexError as e:
+                print(f"Error: {e}")
         elif args.command == 'complete':
-            task_manager.mark_task_complete(args.index)
+            try:
+                task_manager.mark_task_complete(args.index)
+                print("Task marked as complete.")
+            except IndexError as e:
+                print(f"Error: {e}")
         else:
             print("Welcome to the task manager")
             name = input("What is your name? ")
