@@ -22,7 +22,7 @@ def interactive_mode():
         
         elif response == "2":
             tasks = task_manager.list_tasks()
-            print("\nCurrent Tasks:")
+            print("\nTask List:")
             for i, task in enumerate(tasks):  # Zero-based indexing
                 status = "✓" if task["completed"] else "✗"
                 print(f"{i}. {task['description']} [Due: {task['due_date']}] [Completed: {status}]")
@@ -65,14 +65,14 @@ def main():
     add_parser.add_argument('--due', type=str, help='Due date of the task in YYYY-MM-DD format')
 
     # List tasks
-    list_parser = subparsers.add_parser('list', help='List all tasks')
+    list_parser = subparsers.add_parser('list', help='Task List')
 
     # Remove task
     remove_parser = subparsers.add_parser('remove', help='Remove a task by index')
     remove_parser.add_argument('index', type=int, help='Index of the task to remove')
 
     # Complete task
-    complete_parser = subparsers.add_parser('complete', help='Mark a task as complete by index')
+    complete_parser = subparsers.add_parser('complete', help='Mark Task Completed')
     complete_parser.add_argument('index', type=int, help='Index of the task to mark as complete')
 
     args = parser.parse_args()
@@ -84,6 +84,7 @@ def main():
             task_manager.add_task(args.description, args.due)
         elif args.command == 'list':
             tasks = task_manager.list_tasks()
+            print("\nTask List:")
             for i, task in enumerate(tasks):  # Zero-based indexing
                 status = "✓" if task["completed"] else "✗"
                 print(f"{i}. {task['description']} [Due: {task['due_date']}] [Completed: {status}]")
