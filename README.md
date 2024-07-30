@@ -171,5 +171,21 @@
 
 <p><a href="#to-do-list">Back to top</a></p>
 
+<h2>Technologies Used</h2>
+
+<h3>Languages Used</h3>
+<ul>
+  <li>Python</li>
+</ul>
+
+<h3>Frameworks, Libraries, and Programs Used</h3>
+<ul>
+  <li><strong>argparse</strong>: For parsing command-line arguments.</li>
+  <li><strong>os</strong>: For clearing the terminal screen.</li>
+  <li><strong>time</strong>: For adding delays to certain outputs.</li>
+  <li><strong>sys</strong>: For system-specific parameters and functions.</li>
+</ul>
+
+<p><a href="#to-do-list">Back to top</a></p>
 
 
