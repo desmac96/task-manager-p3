@@ -113,3 +113,27 @@
 
 <p><a href="#to-do-list">Back to top</a></p>
 
+<h3>Colour Scheme</h3>
+<p>The application uses a simple and clean colour scheme to ensure readability and usability. The following colours are used:</p>
+<ul>
+  <li><strong>Red</strong>: To display error messages.</li>
+  <li><strong>Blue</strong>: Welcoming messages for the user.</li>
+  <li><strong>Green</strong>: For valid inputs.</li>
+  <li><strong>Yellow</strong>: To display important information.</li>
+  <li><strong>Magenta</strong>: To display the message when the user selects to quit the program.</li>
+</ul>
+
+<h2>Design</h2>
+
+<h3>Flowcharts</h3>
+<p>Flowcharts were created to map out the user experience and the validation process within the application.</p>
+
+<h4>User Experience Flowchart</h4>
+<img src="assets/images/user-experience-flowchart.png" alt="User Experience Flowchart">
+
+<h4>Validation Flowchart</h4>
+<img src="assets/images/validation-flowchart.png" alt="Validation Flowchart">
+
+<p><a href="#to-do-list">Back to top</a></p>
+
+
