@@ -188,4 +188,19 @@
 
 <p><a href="#to-do-list">Back to top</a></p>
 
+<h2>Deployment</h2>
+<p>This project was deployed using Heroku. Here are the steps to deploy your project:</p>
+<ol>
+  <li>Create a <a href="https://id.heroku.com/login">Heroku</a> account or log in if you already have one.</li>
+  <li>Click the 'New' button and select 'Create new app'.</li>
+  <li>Enter a unique name for your app and choose the region that best suits your location.</li>
+  <li>Click 'Create app'.</li>
+  <li>In the 'Settings' tab, scroll down to the 'Config Vars' section and click 'Reveal Config Vars'. Add a new Config Var with the key <code>PORT</code> and the value <code>8000</code>.</li>
+  <li>Scroll down to the 'Buildpacks' section and click 'Add buildpack'. Add Python and NodeJS, in that order. Click 'Save changes'.</li>
+  <li>Go to the 'Deploy' tab, select 'GitHub' as the deployment method, and connect your GitHub repository.</li>
+  <li>Once connected, scroll down and click 'Deploy Branch' to deploy your app manually.</li>
+</ol>
+<p>After these steps, your app should be deployed and accessible from the provided URL.</p>
+
+<p><a href="#to-do-list">Back to top</a></p>
 
