@@ -67,3 +67,49 @@
   </ul>
 
   <p><a href="#to-do-list">Back to top</a></p>
+
+  <h2>User Experience (UX)</h2>
+
+<h3>Initial Discussion</h3>
+<p>The To-Do List is a tool for users to manage their tasks efficiently. The program is designed to be simple and intuitive, allowing users to add tasks, list tasks, remove tasks, and mark tasks as complete.</p>
+
+<h4>Key Information for the Application</h4>
+<ul>
+  <li>New users can set up a new account.</li>
+  <li>Existing users can access their accounts.</li>
+  <li>Functions to:
+    <ul>
+      <li>Add tasks</li>
+      <li>List tasks</li>
+      <li>Remove tasks</li>
+      <li>Mark tasks as complete</li>
+    </ul>
+  </li>
+</ul>
+
+<h3>User Stories</h3>
+
+<h4>Client Goals</h4>
+<ul>
+  <li>A simple and user-friendly application.</li>
+  <li>An application that meets the user’s needs.</li>
+  <li>Users to feel their data is secure.</li>
+</ul>
+
+<h4>First Time User Goals</h4>
+<ul>
+  <li>To be able to set up a new account.</li>
+  <li>To understand how to use the application.</li>
+  <li>To be able to choose their own username.</li>
+</ul>
+
+<h4>Returning User Goals</h4>
+<ul>
+  <li>For personal data to be stored securely.</li>
+  <li>To access an existing account.</li>
+  <li>To be able to add tasks, list tasks, remove tasks, and mark tasks as complete.</li>
+  <li>A pleasant user experience.</li>
+</ul>
+
+<p><a href="#to-do-list">Back to top</a></p>
+
