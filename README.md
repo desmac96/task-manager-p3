@@ -113,16 +113,6 @@
 
 <p><a href="#to-do-list">Back to top</a></p>
 
-<h3>Colour Scheme</h3>
-<p>The application uses a simple and clean colour scheme to ensure readability and usability. The following colours are used:</p>
-<ul>
-  <li><strong>Red</strong>: To display error messages.</li>
-  <li><strong>Blue</strong>: Welcoming messages for the user.</li>
-  <li><strong>Green</strong>: For valid inputs.</li>
-  <li><strong>Yellow</strong>: To display important information.</li>
-  <li><strong>Magenta</strong>: To display the message when the user selects to quit the program.</li>
-</ul>
-
 <h2>Design</h2>
 
 <h3>Flowcharts</h3>
@@ -135,5 +125,51 @@
 <img src="assets/images/validation-flowchart.png" alt="Validation Flowchart">
 
 <p><a href="#to-do-list">Back to top</a></p>
+
+<h2>Features</h2>
+
+<h3>Existing Features</h3>
+
+<h4>Welcome Page</h4>
+<p>When the program is first run, the user is greeted with a welcome message and asked to enter their name. The name must only contain alphabetic characters.</p>
+
+<h4>New User</h4>
+<p>If the user is new, they can enter their name, which will be validated to ensure it only contains alphabetic characters.</p>
+
+<h4>Main Menu</h4>
+<p>After entering their name, the user is presented with the main menu with the following options:</p>
+<ul>
+  <li>Add a new task</li>
+  <li>List all tasks</li>
+  <li>Remove a task</li>
+  <li>Mark a task as complete</li>
+  <li>Exit</li>
+</ul>
+
+<h4>Add Task</h4>
+<p>The user can add a new task by entering a description and an optional due date.</p>
+
+<h4>List Tasks</h4>
+<p>The user can list all tasks, which displays the tasks along with their status (complete or incomplete).</p>
+
+<h4>Remove Task</h4>
+<p>The user can remove a task by specifying its index in the list.</p>
+
+<h4>Mark Task Complete</h4>
+<p>The user can mark a task as complete by specifying its index in the list.</p>
+
+<h4>Exit</h4>
+<p>The user can exit the application.</p>
+
+<h3>Future Implementations</h3>
+<ul>
+  <li>Implement user authentication to store and retrieve user-specific task lists.</li>
+  <li>Add a feature to edit existing tasks.</li>
+  <li>Improve error handling and validation for user inputs.</li>
+  <li>Allow tasks to be categorized.</li>
+</ul>
+
+<p><a href="#to-do-list">Back to top</a></p>
+
 
 
