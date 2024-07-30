@@ -7,9 +7,9 @@ def interactive_mode():
     while True:
         print("\nChoose an option:")
         print("1. Add a new task")
-        print("2. List all tasks")
+        print("2. Task List")
         print("3. Remove a task")
-        print("4. Complete a task")
+        print("4. Mark Task Completed")
         print("5. Exit")
 
         response = input("Enter your choice: ")
