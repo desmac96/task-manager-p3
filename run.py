@@ -1,14 +1,48 @@
-#run.py
-
 import os
 import argparse
-
 from src.task_manager import TaskManager
-print("Welcome to the task manager")
-name=input("What is your name?")
-print ("Hello "+name)
-response=input ("Choose the following options\n 1. Add a new task \n 2. List all tasks")
-if response=="1":
+
+def interactive_mode():
+    task_manager = TaskManager()
+    
+    while True:
+        print("\nChoose an option:")
+        print("1. Add a new task")
+        print("2. List all tasks")
+        print("3. Remove a task")
+        print("4. Complete a task")
+        print("5. Exit")
+
+        response = input("Enter your choice: ")
+
+        if response == "1":
+            description = input("Enter the task description: ")
+            due_date = input("Enter the due date (YYYY-MM-DD) or leave blank: ")
+            task_manager.add_task(description, due_date if due_date else None)
+            print("Task added.")
+        
+        elif response == "2":
+            tasks = task_manager.list_tasks()
+            print("\nCurrent Tasks:")
+            for i, task in enumerate(tasks):
+                print(f"{i}. {task}")
+        
+        elif response == "3":
+            index = int(input("Enter the index of the task to remove: "))
+            task_manager.remove_task(index)
+            print("Task removed.")
+        
+        elif response == "4":
+            index = int(input("Enter the index of the task to complete: "))
+            task_manager.mark_task_complete(index)
+            print("Task marked as complete.")
+        
+        elif response == "5":
+            print("Exiting the task manager. Goodbye!")
+            break
+        
+        else:
+            print("Invalid option. Please try again.")
 
 def main():
     parser = argparse.ArgumentParser(description="Command-line To-Do List Application")
@@ -47,7 +81,10 @@ def main():
         elif args.command == 'complete':
             task_manager.mark_task_complete(args.index)
         else:
-            parser.print_help()
+            print("Welcome to the task manager")
+            name = input("What is your name? ")
+            print("Hello " + name)
+            interactive_mode()
     except IndexError as e:
         print(f"Error: {e}")
     except ValueError as e:
@@ -55,3 +92,5 @@ def main():
     except Exception as e:
         print(f"An unexpected error occurred: {e}")
 
+if __name__ == '__main__':
+    main()
