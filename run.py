@@ -1,6 +1,17 @@
 import argparse
 from src.task_manager import TaskManager
 
+def validate_name(name):
+    return name.isalpha()
+
+def get_valid_name():
+    while True:
+        name = input("What is your name? ")
+        if validate_name(name):
+            return name
+        else:
+            print("Invalid name. Please enter alphabetic characters only.")
+
 def interactive_mode():
     task_manager = TaskManager()
     
@@ -102,7 +113,7 @@ def main():
                 print(f"Error: {e}")
         else:
             print("Welcome to the task manager")
-            name = input("What is your name? ")
+            name = get_valid_name()
             print("Hello " + name)
             interactive_mode()
     except IndexError as e:
