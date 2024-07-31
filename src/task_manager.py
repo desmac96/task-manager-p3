@@ -1,18 +1,4 @@
-# src/task.py
-class Task:
-    def __init__(self, description, due_date=None):
-        self.description = description
-        self.due_date = due_date
-        self.completed = False
-
-    def mark_complete(self):
-        self.completed = True
-
-    def __str__(self):
-        return f"{self.description} (Due: {self.due_date}, Completed: {'✓' if self.completed else '✗'})"
-
-# src/task_manager.py
-from src.task import Task
+from task import Task
 
 class TaskManager:
     def __init__(self):
