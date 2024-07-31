@@ -34,9 +34,8 @@ def interactive_mode():
         elif response == "2":
             tasks = task_manager.list_tasks()
             print("\nTask List:")
-            for i, task in enumerate(tasks):  # Zero-based indexing
-                status = "✓" if task["completed"] else "✗"
-                print(f"{i}. {task['description']} [Due: {task['due_date']}] [Completed: {status}]")
+            for i, task in enumerate(tasks):
+                print(f"{i}. {task}")
         
         elif response == "3":
             try:
@@ -96,9 +95,8 @@ def main():
         elif args.command == 'list':
             tasks = task_manager.list_tasks()
             print("\nTask List:")
-            for i, task in enumerate(tasks):  # Zero-based indexing
-                status = "✓" if task["completed"] else "✗"
-                print(f"{i}. {task['description']} [Due: {task['due_date']}] [Completed: {status}]")
+            for i, task in enumerate(tasks):
+                print(f"{i}. {task}")
         elif args.command == 'remove':
             try:
                 task_manager.remove_task(args.index)
