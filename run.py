@@ -69,63 +69,11 @@ def interactive_mode():
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Command-line To-Do List Application")
+    print("Welcome to the task manager")
+    name = get_valid_name()
+    print("Hello " + name)
+    interactive_mode()
 
-    subparsers = parser.add_subparsers(dest='command')
-
-    # Add task
-    add_parser = subparsers.add_parser('add', help='Add a new task')
-    add_parser.add_argument('description', type=str, help='Description of the task')
-    add_parser.add_argument(
-        '--due', type=str, help='Due date of the task in YYYY-MM-DD format'
-    )
-
-    # List tasks
-    subparsers.add_parser('list', help='Task List')
-
-    # Remove task
-    remove_parser = subparsers.add_parser('remove', help='Remove a task by index')
-    remove_parser.add_argument('index', type=int, help='Index of the task to remove')
-
-    # Complete task
-    complete_parser = subparsers.add_parser('complete', help='Mark Task Completed')
-    complete_parser.add_argument('index', type=int, help='Index of the task to mark as complete')
-
-    args = parser.parse_args()
-
-    task_manager = TaskManager()
-
-    try:
-        if args.command == 'add':
-            task_manager.add_task(args.description, args.due)
-        elif args.command == 'list':
-            tasks = task_manager.list_tasks()
-            print("\nTask List:")
-            for i, task in enumerate(tasks):
-                print(f"{i}. {task}")
-        elif args.command == 'remove':
-            try:
-                task_manager.remove_task(args.index)
-                print("Task removed.")
-            except IndexError as e:
-                print(f"Error: {e}")
-        elif args.command == 'complete':
-            try:
-                task_manager.mark_task_complete(args.index)
-                print("Task marked as complete.")
-            except IndexError as e:
-                print(f"Error: {e}")
-        else:
-            print("Welcome to the task manager")
-            name = get_valid_name()
-            print("Hello " + name)
-            interactive_mode()
-    except IndexError as e:
-        print(f"Error: {e}")
-    except ValueError as e:
-        print(f"Error: {e}")
-    except Exception as e:
-        print(f"An unexpected error occurred: {e}")
 
 
 if __name__ == '__main__':
