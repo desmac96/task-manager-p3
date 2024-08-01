@@ -1,161 +1,132 @@
-  <h1>To-Do List Application</h1>
+<h1>Task Manager</h1>
 
-    <p>This is a command-line based To-Do List application that allows users to add, list, remove, and complete tasks.
-        The application provides both interactive mode and command-line arguments for flexibility.</p>
+<p>The Task Manager is a command-line application designed to help users organize and manage their tasks efficiently. It provides a simple interface to add, modify, complete, and remove tasks.</p>
 
-    <h2>Contents</h2>
-    <ul>
-        <li><a href="#introduction">Introduction</a></li>
-        <li><a href="#user-experience">User Experience</a></li>
-        <li><a href="#features">Features</a></li>
-        <li><a href="#technologies-used">Technologies Used</a></li>
-        <li><a href="#deployment">Deployment</a></li>
-        <li><a href="#testing">Testing</a></li>
-        <li><a href="#credits">Credits</a></li>
-    </ul>
+<h2>Contents</h2>
+<ul>
+    <li><a href="#user-experience">User Experience (UX)</a></li>
+    <li><a href="#design">Design</a></li>
+    <li><a href="#features">Features</a></li>
+    <li><a href="#technologies-used">Technologies Used</a></li>
+    <li><a href="#testing">Testing</a></li>
+    <li><a href="#deployment">Deployment</a></li>
+    <li><a href="#credits">Credits</a></li>
+    <li><a href="#acknowledgements">Acknowledgements</a></li>
+</ul>
 
-    <h2 id="introduction">Introduction</h2>
-    <p>The To-Do List application is designed to help users manage their tasks efficiently. Users can add tasks with
-        descriptions and optional due dates, list all tasks, remove tasks by index, and mark tasks as complete. The
-        application supports both interactive mode for direct user input and command-line arguments for automation and
-        scripting.</p>
+<h2 id="user-experience">User Experience (UX)</h2>
+<h3>Initial Discussion</h3>
+<p>The Task Manager is designed to be a simple and intuitive tool for managing tasks. It aims to provide an easy-to-use interface for adding, modifying, completing, and removing tasks.</p>
 
-    <h2 id="user-experience">User Experience</h2>
-    <h3>Site & User Goals</h3>
-    <h4>Site Goals</h4>
-    <ul>
-        <li>Provide an intuitive command-line interface for task management.</li>
-        <li>Enable users to easily add, list, remove, and complete tasks.</li>
-    </ul>
-    <h4>User Goals</h4>
-    <ul>
-        <li>Efficiently manage tasks through a simple and intuitive interface.</li>
-        <li>Quickly add, modify, and delete tasks as needed.</li>
-        <li>View the current list of tasks at any time.</li>
-    </ul>
+<h3>Key Information for the Site</h3>
+<ul>
+    <li>New users can set up their task manager by providing their name.</li>
+    <li>Users can add tasks with descriptions and optional due dates.</li>
+    <li>Users can mark tasks as completed, remove tasks, and view all tasks.</li>
+</ul>
 
-    <h3>User Stories</h3>
-    <h4>Adding a Task</h4>
-    <p>As a user, I want to add a new task with a description so that I can keep track of my upcoming work.</p>
-    <ul>
-        <li>The system should prompt the user to enter a task description.</li>
-        <li>The task should be assigned a unique ID, current date, and time.</li>
-        <li>The task should be saved and visible in the task list.</li>
-        <li>A confirmation message should be displayed.</li>
-    </ul>
+<h3>User Stories</h3>
+<h4>Client Goals</h4>
+<ul>
+    <li>Provide a simple program that users will want to use.</li>
+    <li>Ensure the program meets the user’s needs.</li>
+    <li>Make users feel their data is handled securely.</li>
+</ul>
 
-    <h4>Modifying a Task</h4>
-    <p>As a user, I want to modify the description of an existing task so that I can update the task details if they
-        change.</p>
-    <ul>
-        <li>The system should prompt the user to enter the task ID they wish to modify.</li>
-        <li>The system should allow the user to enter a new description.</li>
-        <li>The task should be updated with the new description.</li>
-        <li>A confirmation message should be displayed if the modification is successful.</li>
-    </ul>
+<h4>First Time Visitor Goals</h4>
+<ul>
+    <li>Understand how to use the program.</li>
+    <li>Set up a task manager by providing their name.</li>
+</ul>
 
-    <h4>Deleting a Task</h4>
-    <p>As a user, I want to delete a task by its ID so that I can remove tasks that are no longer needed.</p>
-    <ul>
-        <li>The system should prompt the user to enter the task ID they wish to delete.</li>
-        <li>The task should be removed from the list.</li>
-        <li>A confirmation message should be displayed if the deletion is successful.</li>
-        <li>An error message should be displayed if the task ID does not exist.</li>
-    </ul>
+<h4>Returning Visitor Goals</h4>
+<ul>
+    <li>Add new tasks with descriptions and optional due dates.</li>
+    <li>View the list of all tasks.</li>
+    <li>Mark tasks as completed.</li>
+    <li>Remove tasks that are no longer needed.</li>
+</ul>
 
-    <h4>Viewing All Tasks</h4>
-    <p>As a user, I want to view a list of all tasks so that I can see what work needs to be done and track my
-        progress.</p>
-    <ul>
-        <li>The system should display all tasks with their ID, date, time, and description.</li>
-        <li>The tasks should be displayed in a readable format.</li>
-        <li>The list should be up-to-date with all added, modified, or deleted tasks.</li>
-    </ul>
+<h2 id="design">Design</h2>
+<h3>Flowcharts</h3>
+<p>The flowcharts were created using Miro to outline the flow of the application.</p>
 
-    <h2 id="features">Features</h2>
-    <h3>Existing Features</h3>
-    <h4>Interactive Mode</h4>
-    <ul>
-        <li>Allows users to interact with the application via a simple menu.</li>
-        <li>Users can add, list, remove, and complete tasks through interactive prompts.</li>
-    </ul>
+<h3>Flow Logic Diagram</h3>
+<p>The flow logic diagram illustrates the interactions and processes within the Task Manager program.</p>
 
-    <h4>Command-Line Arguments</h4>
-    <ul>
-        <li>Provides flexibility for users to add, list, remove, and complete tasks through command-line arguments.</li>
-        <li>Allows for automation and scripting of task management.</li>
-    </ul>
+<h2 id="features">Features</h2>
+<h3>Existing Features</h3>
+<h4>Welcome Screen</h4>
+<p>The user is welcomed and prompted to enter their name, which is validated to ensure only alphabetic characters are used.</p>
 
-    <h4>Error Handling</h4>
-    <ul>
-        <li>Handles invalid input gracefully, providing meaningful error messages to the user.</li>
-        <li>Ensures the application continues to run smoothly even when errors occur.</li>
-    </ul>
+<h4>Interactive Mode</h4>
+<p>The main functionality of the task manager is provided in an interactive mode, where users can choose to add, list, remove, or complete tasks.</p>
 
-    <h4>Validation</h4>
-    <ul>
-        <li>Validates user input to ensure it meets the required criteria (e.g., alphabetic names, valid task
-            indices).</li>
-        <li>Prompts users to re-enter information if validation fails.</li>
-    </ul>
+<h4>Add Task</h4>
+<p>Users can add tasks with descriptions and optional due dates. The task is saved and a confirmation message is displayed.</p>
 
-    <h3>Future Implementations</h3>
-    <ul>
-        <li>Implementing due dates and reminders for tasks.</li>
-        <li>Adding priority levels to tasks.</li>
-        <li>Allowing users to categorize tasks.</li>
-        <li>Integrating with external calendars or task management tools.</li>
-    </ul>
+<h4>Task List</h4>
+<p>Users can view a list of all tasks, including their descriptions, due dates, and completion status.</p>
 
-    <h2 id="technologies-used">Technologies Used</h2>
-    <h3>Languages</h3>
-    <ul>
-        <li>Python</li>
-    </ul>
+<h4>Remove Task</h4>
+<p>Users can remove tasks by specifying the index of the task. A confirmation message is displayed upon successful removal.</p>
 
-    <h3>Libraries</h3>
-    <ul>
-        <li>argparse: For parsing command-line arguments.</li>
-    </ul>
+<h4>Mark Task Completed</h4>
+<p>Users can mark tasks as completed by specifying the index of the task. A confirmation message is displayed upon successful completion.</p>
 
-    <h2 id="deployment">Deployment</h2>
-    <p>This project was deployed using Heroku. Follow these steps to deploy your own instance:</p>
-    <ol>
-        <li>Log in or sign up for a Heroku account.</li>
-        <li>Create a new app from the Heroku dashboard.</li>
-        <li>Set up the necessary config vars.</li>
-        <li>Add the required buildpacks (Python and Node.js).</li>
-        <li>Connect your GitHub repository to Heroku.</li>
-        <li>Deploy the app manually or set up automatic deploys from the desired branch.</li>
-    </ol>
+<h4>Exit</h4>
+<p>Users can exit the task manager. A farewell message is displayed.</p>
 
-    <h2 id="testing">Testing</h2>
-    <h3>Manual Testing</h3>
-    <ul>
-        <li>Adding a Task: Verified that tasks are added correctly and displayed in the task list.</li>
-        <li>Modifying a Task: Confirmed that task descriptions can be updated and the changes are saved.</li>
-        <li>Deleting a Task: Ensured that tasks are removed from the list and the changes are saved.</li>
-        <li>Viewing All Tasks: Checked that the task list displays all tasks with their details.</li>
-    </ul>
+<h3>Future Implementations</h3>
+<ul>
+    <li>Implementing user authentication for personalized task management.</li>
+    <li>Adding categories to tasks for better organization.</li>
+    <li>Implementing a feature to edit tasks.</li>
+</ul>
 
-    <h3>Automated Testing</h3>
-    <p>Automated tests were written using the <code>unittest</code> module to validate the functionality of adding,
-        modifying, and deleting tasks.</p>
+<h2 id="technologies-used">Technologies Used</h2>
+<h3>Languages Used</h3>
+<ul>
+    <li>Python</li>
+</ul>
 
-    <h2 id="credits">Credits</h2>
-    <h3>Code</h3>
-    <ul>
-        <li>The code for parsing command-line arguments was adapted from the official Python <code>argparse</code>
-            documentation.</li>
-    </ul>
+<h3>Libraries Used</h3>
+<ul>
+    <li>argparse</li>
+    <li>datetime</li>
+</ul>
 
-    <h3>Content</h3>
-    <ul>
-        <li>All content was written by [Your Name].</li>
-    </ul>
+<h2 id="testing">Testing</h2>
+<h3>Manual Testing</h3>
+<ul>
+    <li>Tested adding tasks with and without due dates.</li>
+    <li>Tested listing all tasks.</li>
+    <li>Tested removing tasks by index.</li>
+    <li>Tested marking tasks as completed.</li>
+    <li>Tested name validation to ensure only alphabetic characters are accepted.</li>
+</ul>
 
-    <h3>Acknowledgements</h3>
-    <ul>
-        <li>Thanks to my mentor for guidance and support throughout the development of this project.</li>
-        <li>Thanks to the Code Institute for providing the project template and resources.</li>
-    </ul>
+<h3>Automated Testing</h3>
+<p>Automated testing was performed using the unittest module in Python. Test cases were created to ensure the functionality of adding, removing, and completing tasks.</p>
+
+<h2 id="deployment">Deployment</h2>
+<h3>Heroku Deployment</h3>
+<p>This project was deployed using Heroku.</p>
+<ol>
+    <li>Create a <a href="https://id.heroku.com/login" target="_blank">Heroku</a> account or sign in if you already have one.</li>
+    <li>Click the 'New' button and select 'Create new app'.</li>
+    <li>Enter a unique name for your app and choose the region you are in.</li>
+    <li>Click 'Create app'.</li>
+    <li>Navigate to the 'Settings' tab and reveal config vars. Add any necessary config vars (e.g., TASKS_LOG_PATH if using a custom path).</li>
+    <li>Scroll to the buildpacks section and add Python.</li>
+    <li>Go to the 'Deploy' tab, select GitHub as the deployment method, and connect your GitHub account.</li>
+    <li>Find your repository and connect it to Heroku.</li>
+    <li>Enable automatic deploys to update the Heroku app with new commits to the selected branch, or manually deploy the branch.</li>
+</ol>
+
+<h2 id="credits">Credits</h2>
+<h3>Code Used</h3>
+<p>The code for the task management functionality was written by me, using standard Python libraries.</p>
+
+<h2 id="acknowledgements">Acknowledgements</h2>
+<p>Special thanks to my mentor and the Code Institute community for their guidance and support throughout this project.</p>
