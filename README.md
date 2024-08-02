@@ -1,8 +1,6 @@
 <h1>Task Manager</h1>
+<p>The Task Manager is a command-line application designed to help users organise and manage their tasks efficiently. It provides a simple interface to add, modify, complete, and remove tasks.</p>
 <img src="assets/home-screen-img1.png" alt="Home Screen">
-
-<p>The Task Manager is a command-line application designed to help users organize and manage their tasks efficiently. It provides a simple interface to add, modify, complete, and remove tasks.</p>
-
 <h2>Contents</h2>
 <ul>
     <li><a href="#user-experience">User Experience (UX)</a></li>
@@ -31,7 +29,6 @@
 <ul>
     <li>Provide a simple program that users will want to use.</li>
     <li>Ensure the program meets the user’s needs.</li>
-    <li>Make users feel their data is handled securely.</li>
 </ul>
 
 <h4>First Time Visitor Goals</h4>
@@ -63,7 +60,7 @@
 <img src="assets/home-screen-img1.png" alt="Home Screen">
 
 <h4>Interactive Mode</h4>
-<p>The main functionality of the task manager is provided in an interactive mode, where users can choose to add, list, remove, or complete tasks.</p>
+<p>The main functionality of the task manager is provided in an interactive mode, where users can choose to add, list, remove, complete tasks or exit the program.</p>
 <img src="assets/options-img2.png" alt="Options Screen">
 
 <h4>Add Task</h4>
@@ -100,12 +97,6 @@
     <li>Python</li>
 </ul>
 
-<h3>Libraries Used</h3>
-<ul>
-    <li>argparse</li>
-    <li>datetime</li>
-</ul>
-
 <h2 id="testing">Testing</h2>
 <h3>Manual Testing</h3>
 <ul>
@@ -115,9 +106,6 @@
     <li>Tested marking tasks as completed.</li>
     <li>Tested name validation to ensure only alphabetic characters are accepted.</li>
 </ul>
-
-<h3>Automated Testing</h3>
-<p>Automated testing was performed using the unittest module in Python. Test cases were created to ensure the functionality of adding, removing, and completing tasks.</p>
 
 <h3>Code Linting</h3>
 <p>The project was linted using the Code Institute Python Linter, and no errors were found.</p>
@@ -132,16 +120,11 @@
     <li>Click the 'New' button and select 'Create new app'.</li>
     <li>Enter a unique name for your app and choose the region you are in.</li>
     <li>Click 'Create app'.</li>
-    <li>Navigate to the 'Settings' tab and reveal config vars. Add any necessary config vars (e.g., TASKS_LOG_PATH if using a custom path).</li>
     <li>Scroll to the buildpacks section and add Python.</li>
     <li>Go to the 'Deploy' tab, select GitHub as the deployment method, and connect your GitHub account.</li>
     <li>Find your repository and connect it to Heroku.</li>
     <li>Enable automatic deploys to update the Heroku app with new commits to the selected branch, or manually deploy the branch.</li>
 </ol>
-
-<h2 id="credits">Credits</h2>
-<h3>Code Used</h3>
-<p>The code for the task management functionality was written by me, using standard Python libraries.</p>
 
 <h2 id="acknowledgements">Acknowledgements</h2>
 <p>Special thanks to my mentor and the Code Institute community for their guidance and support throughout this project.</p>

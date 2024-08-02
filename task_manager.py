@@ -1,17 +1,5 @@
-class Task:
-    def __init__(self, description, due_date=None):
-        self.description = description
-        self.due_date = due_date
-        self.completed = False
-
-    def mark_complete(self):
-        self.completed = True
-
-    def __str__(self):
-        return (
-            f"{self.description} (Due: {self.due_date}, "
-            f"Completed: {'✓' if self.completed else '✗'})"
-        )
+from task import Task
+import sys
 
 
 class TaskManager:
@@ -19,8 +7,12 @@ class TaskManager:
         self.tasks = []
 
     def add_task(self, description, due_date=None):
-        task = Task(description, due_date)
-        self.tasks.append(task)
+        try:
+            task = Task(description, due_date)
+            self.tasks.append(task)
+        except ValueError:
+            print("Please use recommended date format")
+            sys.exit()
 
     def remove_task(self, index):
         if 0 <= index < len(self.tasks):

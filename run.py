@@ -30,7 +30,7 @@ def interactive_mode():
 
         if response == "1":
             description = input("Enter the task description: ")
-            due_date = input("Enter the due date (YYYY-MM-DD) or leave blank: ")
+            due_date = input("Enter the due date (DD-MM-YY) or leave blank: ")
             task_manager.add_task(description, due_date if due_date else None)
             print("Task added.")
 
@@ -75,6 +75,5 @@ def main():
     interactive_mode()
 
 
-
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
